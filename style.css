@@ -87,7 +87,16 @@ header {
   align-items: center;
   gap: 8px;
 }
+.banner-img-container img{
+  width: 100%;
+}
 
+
+
+/* Main Styles */
+main{
+  padding: 0 195px;
+}
 /* Brand Styles */
 .brand {
   justify-content: center;
@@ -107,16 +116,25 @@ header {
   font-weight: 600;
   line-height: 70px;
 }
+.collection-card{
+  margin-top: 34px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 .card {
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
   background: rgb(255, 255, 255);
 }
-.card-img {
-}
 .card-img img {
   border-radius: 5px;
+  width: 100%;
+}
+.card-text-container{
+  max-width: 210px;
 }
 .card-title {
   color: rgb(24, 25, 31);
@@ -156,4 +174,189 @@ header {
   line-height: 143%;
   letter-spacing: 1.8%;
   margin-top: 5px;
+}
+.see-btn{
+  text-align: right;
+}
+.see-btn .btn{
+  background-color: transparent;
+  color:  var(--secondary-color);
+  text-decoration: none;
+}
+/* Featured Styles */
+.featured{
+  gap: 96px;
+  align-items: center;
+  margin: 100px 0;
+}
+.featured-title{
+  color: rgb(10, 8, 38);
+  font-size: 2.34rem;
+  font-weight: 700;
+  line-height: 60px;
+}
+.featured-desc{
+  color: rgb(108, 108, 108);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 16px 0;
+}
+.featured-img img{
+  width: 100%;
+}
+
+/* Footer Styles */
+footer{
+  background: #000957;
+  padding: 60px 0;
+  text-align: center;
+}
+footer h3{
+  color: rgb(255, 255, 255);
+font-size: 1.5rem;
+font-weight: 700;
+line-height: 36px;
+}
+footer h4, footer h5{
+  color: rgb(217, 219, 225);
+font-family: Manrope;
+font-size: 0.9rem;
+font-weight: 700;
+line-height: 24px;
+margin: 5px 0;
+}
+.social-icons{
+  align-items: center;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 25px;
+}
+.social-icons a{
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+
+/* For Mobile Device Responsive */
+@media only screen and (max-width: 576px) {
+  header,main{
+    padding: 15px 0;
+  }
+  .navbar, .banner, .brand, .featured{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .navbar h3,  .banner, .featured{
+    text-align: center;
+  }
+  .nav-links{
+    display: none;
+  }
+  .banner-text-container {
+    width: 100%;
+  }
+  .banner-title, .featured-title{
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+  #banner-btn{
+    display: inline-block;
+  }
+
+  /* Main */
+  
+  .collection{
+    margin: 0;
+  }
+  .collection-card{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .featured{
+    margin: 20px 0;
+  }
+  footer{
+    padding: 20px 0;
+  }
+}
+
+/* For small Screen Tablet Device Responsive */
+
+@media only screen and (min-width: 576.1px) and (max-width: 768px) {
+  header,main{
+    padding: 15px 0;
+  }
+  .navbar, .banner,  .featured{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .brand{
+    flex-wrap: wrap;
+  }
+  .navbar h3,  .banner, .featured{
+    text-align: center;
+  }
+ 
+  .banner-text-container {
+    width: 100%;
+  }
+  .banner-title, .featured-title{
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+  #banner-btn{
+    display: inline-block;
+  }
+   /* Main */
+  
+   .collection{
+    margin: 0;
+  }
+  .collection-card{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+/* For Big Screen Tablet Device Responsive */
+@media only screen and (min-width: 768.1px) and (max-width: 992px){
+  header,main{
+    padding: 15px 0;
+  }
+  .navbar{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .brand{
+    flex-wrap: wrap;
+  }
+  .navbar h3,  .banner, .featured{
+    
+  }
+  .banner-text-container {
+    width: 100%;
+  }
+  .banner-title, .featured-title{
+    font-size: 2.3rem;
+    line-height: 50px;
+  }
+  #banner-btn{
+    display: inline-block;
+  }
+  /* Main */
+  .featured-img{
+    width: 50%;
+  }
+  .featured-img img{
+    width: 100%;
+  }
+   .collection{
+    margin: 0;
+  }
+  .collection-card{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 }
